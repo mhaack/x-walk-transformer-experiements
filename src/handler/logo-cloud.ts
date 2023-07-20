@@ -1,9 +1,4 @@
-const decodeHtmlEntity = (x: string): string => {
-	return x.replace(/&#(\d+);/g, function (match, dec) {
-		return String.fromCharCode(dec);
-	});
-};
-
+import { decodeHtmlEntity } from '../util/encoding'
 class LogoCloud implements HTMLRewriterElementContentHandlers {
 	constructor(ctx) {
 		this.log = ctx.log;
